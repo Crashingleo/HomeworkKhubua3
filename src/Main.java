@@ -55,29 +55,41 @@ public class Main {
         int capacity = 102;
         int sit = 60;
         int stand = capacity - sit;
-        int place = 7;
+        int place = 50;
         if (place < 60){
-            System.out.println("В вагоне " + (sit - place) + " сидячих мест и " + stand + " стоячих");
+            System.out.println("В вагоне " + (capacity - place) + " свободных мест, из них " + (capacity - stand - place) + " сидячих и " + stand + " стоячих");
         } else if (place >= 60 && place < 102){
             System.out.println("В вагоне нет сидячих мест, но есть " + (stand - (place - sit)) + " стоячих мест");
         } else System.out.println("В вагоне нет мест");
 
         // zadacha 7 //
         System.out.println("Задача 7");
-        int one = 9;
-        int two = 1;
-        int three = 10;
-        if (one > two){
-            if (one > three){
+        int one = 99000;
+        int two = 1000000;
+        int three = 10000;
+        if (one > two)
+        {
+            if (one > three)
+            {
+
                 System.out.println(one);
-            } else System.out.println( three);
-        } else {
-            if(two > three){
-                System.out.println(two);
+
+            }
+            else if(one == three)
+            {
+                System.out.println(three + ", " + one);
             } else System.out.println(three);
+        } else if(two > three)
+        {
+            System.out.println(two);
+        } else if (two == three)
+        {
+            System.out.println(two + ", " + three);
         }
 
-        System.out.println();
+             else System.out.println(three);
+        }
+
 
 
 
@@ -87,4 +99,4 @@ public class Main {
 
 
 
-    }
+
