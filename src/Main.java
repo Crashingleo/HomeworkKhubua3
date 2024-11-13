@@ -3,31 +3,26 @@ public class Main {
         // Zadacha 1 //
         System.out.println("Задача 1");
         int age = 20;
-        if (age < 18)
-        {
+        if (age < 18) {
             System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия");
-        } else
-        {
+        } else {
             System.out.println("Если возраст человека рвен "  + age + ", то он достиг совершеннолетия");
         }
 
         // Zadacha 2 //
         System.out.println("Задача 2");
         int temperature = 10;
-        if (temperature < 5)
-        {
+        if (temperature < 5) {
             System.out.println(" На улице холодно: "  + temperature + " градусов, нужно надеть шапку");
         } else System.out.println("Сегодня тепло: " + temperature + " градусов, можно идти без шапки");
 
         // Zadacha 3 //
         System.out.println("Задача 3");
         int speed = 100;
-        if (speed > 60)
-        {
+        if (speed > 60) {
             System.out.println("Если скорость " + speed + " км/ч, то придется заплатить штраф");
         }
-        else
-            {
+        else {
             System.out.println("Если скорость " + speed + " км/ч, то можно ехать спокойно");
         }
         // Zadacha 4 //
@@ -55,34 +50,40 @@ public class Main {
         int capacity = 102;
         int sit = 60;
         int stand = capacity - sit;
-        int place = 7;
+        int place = 50;
         if (place < 60){
-            System.out.println("В вагоне " + (sit - place) + " сидячих мест и " + stand + " стоячих");
+            System.out.println("В вагоне " + (capacity - place) + " свободных мест, из них " + (capacity - stand - place) + " сидячих и " + stand + " стоячих");
         } else if (place >= 60 && place < 102){
             System.out.println("В вагоне нет сидячих мест, но есть " + (stand - (place - sit)) + " стоячих мест");
         } else System.out.println("В вагоне нет мест");
 
         // zadacha 7 //
         System.out.println("Задача 7");
-        int one = 9;
-        int two = 1;
-        int three = 10;
-        if (one > two){
-            if (one > three){
+        int one = 99000;
+        int two = 1000000;
+        int three = 10000;
+        if (one > two) {
+            if (one > three) {
                 System.out.println(one);
-            } else System.out.println( three);
-        } else {
-            if(two > three){
-                System.out.println(two);
+            }
+            else if(one == three) {
+                System.out.println(three + ", " + one);
             } else System.out.println(three);
+        } else if(two > three) {
+            System.out.println(two);
+        } else if (two == three) {
+            System.out.println(two + ", " + three);
+        }
+        else System.out.println(three);
         }
 
 
 
 
 
+
         }
 
 
 
-    }
+
